@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --primary-purple: 147, 51, 234;
+  --secondary-purple: 168, 85, 247;
+}
+
+/* Light theme */
+:root[class~="light"] {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 240, 240, 240;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+/* Custom cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  background: rgba(147, 51, 234, 0.5);
+  border: 2px solid rgb(147, 51, 234);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(147, 51, 234, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(147, 51, 234, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 51, 234, 0.7);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(45deg, #9333ea, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive view modes */
+.view-desktop {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.view-tablet {
+  max-width: 768px;
+  margin: 0 auto;
+  border-left: 1px solid rgba(147, 51, 234, 0.2);
+  border-right: 1px solid rgba(147, 51, 234, 0.2);
+}
+
+.view-mobile {
+  max-width: 375px;
+  margin: 0 auto;
+  border-left: 1px solid rgba(147, 51, 234, 0.2);
+  border-right: 1px solid rgba(147, 51, 234, 0.2);
+}
+
+/* Theme transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(147, 51, 234, 0.3);
+  color: white;
+} 
