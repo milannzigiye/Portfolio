@@ -1,6 +1,6 @@
 # Milan Nzigiye's Portfolio
 
-A cutting-edge, interactive portfolio showcasing my journey from Nyamirambo to global AI projects.
+A cutting-edge, interactive portfolio showcasing my automations journey.
 
 ## Features
 
